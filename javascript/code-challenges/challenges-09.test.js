@@ -127,7 +127,7 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  arr.foreach((obj) => {
+  arr.forEach((obj) => {
     return houses.push(obj.house);
   });
   return houses;
