@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
@@ -9,7 +9,9 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+  return arr.reduce((acc, current) => {
+    return acc > current ? acc : acc + current;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,13 +21,22 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
-  topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
-  finalExam: true
+const courseInfo = {
+  name: "Code 301",
+  duration: { dayTrack: "4 weeks", eveningTrack: "8 weeks" },
+  topics: [
+    "SMACSS",
+    "APIs",
+    "NodeJS",
+    "SQL",
+    "jQuery",
+    "functional programming",
+  ],
+  finalExam: true,
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
+  return Object.getOwnPropertyNames(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +48,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  return Object.values(obj).includes(value) ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,10 +71,10 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  return Object.entries(obj).map((arr) => {
+    return `${arr[0]}: ${arr[1]}`;
+  });
 };
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -73,50 +84,52 @@ Write a function named getHouses that returns a new array containing the names o
 
 const characters = [
   {
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark',
+    name: "Eddard",
+    spouse: "Catelyn",
+    children: ["Robb", "Sansa", "Arya", "Bran", "Rickon"],
+    house: "Stark",
   },
   {
-    name: 'Jon',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn',
+    name: "Jon",
+    spouse: "Lysa",
+    children: ["Robin"],
+    house: "Arryn",
   },
   {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister',
+    name: "Cersei",
+    spouse: "Robert",
+    children: ["Joffrey", "Myrcella", "Tommen"],
+    house: "Lannister",
   },
   {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen',
+    name: "Daenarys",
+    spouse: "Khal Drogo",
+    children: ["Drogon", "Rhaegal", "Viserion"],
+    house: "Targaryen",
   },
   {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell',
+    name: "Mace",
+    spouse: "Alerie",
+    children: ["Margaery", "Loras"],
+    house: "Tyrell",
   },
   {
-    name: 'Sansa',
-    spouse: 'Tyrion',
-    house: 'Stark',
+    name: "Sansa",
+    spouse: "Tyrion",
+    house: "Stark",
   },
   {
-    name: 'Jon',
+    name: "Jon",
     spouse: null,
-    house: 'Snow',
+    house: "Snow",
   },
 ];
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.foreach((obj) => {
+    return houses.push(obj.house);
+  });
   return houses;
 };
 
@@ -132,9 +145,12 @@ hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+let hasChildrenValues = (arr, character) => {
+  return arr.forEach((obj) => {
+    console.log(obj.name);
+    // console.log(Object.values(obj));
+    // return Object.values(obj).includes(character);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -156,7 +172,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  return arr.join("").length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -191,7 +207,7 @@ All of these objects should be added to an array named "survivors". Return the "
 For example: [ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, ... ].
 ------------------------------------------------------------------------------------------------ */
 
-const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
+const deceasedSpouses = ["Catelyn", "Lysa", "Robert", "Khal Drogo", "Alerie"];
 
 const houseSurvivors = (arr) => {
   const survivors = [];
