@@ -10,7 +10,7 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   return arr.reduce((acc, current) => {
-    return acc > current ? acc : acc + current;
+    return acc > current ? acc : (acc = current);
   }, 0);
 };
 
