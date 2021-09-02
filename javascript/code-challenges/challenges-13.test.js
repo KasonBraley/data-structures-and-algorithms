@@ -7,15 +7,13 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-  let longest = "";
-  let longestIndex = 0;
-  arr.forEach((str, index) => {
-    if (str.length > longest.length) {
-      longestIndex = index;
-      longest = str;
-    }
-  });
-  return longestIndex;
+  let longestString;
+  arr.reduce((acc, current) => {
+    return acc.length > current.length
+      ? (longestString = acc)
+      : (longestString = current);
+  }, "");
+  return arr.indexOf(longestString);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,8 +56,11 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {};
-
+const standardizePhoneNumbers = (arr) => {
+  return arr.map((str) => {
+    return str.replace(/[^\d]/g, "");
+  });
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
 
@@ -68,7 +69,11 @@ Write a function named onlyOddChars that takes in a string and returns only the 
 For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
-const onlyOddChars = (str) => {};
+const onlyOddChars = (str) => {
+  return str.split("").filter((value, index) => {
+    return index % 2 === 1;
+  }).join("");
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
