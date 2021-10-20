@@ -2,4 +2,5 @@
 
 ### Table of Contents
 
-[array-reverse](./javascript/array-reverse/README.md)
+[array-reverse](./javascript/array-reverse/README.md)\
+[array-insert-shift](./javascript/array-insery-shift/README.md)
