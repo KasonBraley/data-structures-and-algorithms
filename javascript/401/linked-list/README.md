@@ -14,3 +14,9 @@ Seems to be the standard approach for JS.
 
 `toString` - returns a string including all the values in the Linked List
 
+`append` - adds a new Node to the end of the list
+
+`insertBefore` - insert a value before a specified node
+
+`insertAfter` - insert a value after a specified node
+
