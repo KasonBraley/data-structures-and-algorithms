@@ -29,4 +29,30 @@ describe("Testing Linked List implementation", () => {
       "third insertion -> second insertion -> testing123 -> NULL"
     );
   });
+
+  it("Can add node(s) to the end of the linked list", () => {
+    list.append("hockey");
+    list.append("football");
+    const allValues = list.toString();
+    expect(allValues).toBe(
+      "third insertion -> second insertion -> testing123 -> hockey -> football -> NULL"
+    );
+  });
+
+  it("Can insert a node before another specified node, regardless of location in the list", () => {
+    list.insertBefore("testing123", 1);
+    const allValues = list.toString();
+    expect(allValues).toBe(
+      "third insertion -> second insertion -> 1 -> testing123 -> hockey -> football -> NULL"
+    );
+  });
+
+  it("Can insert a node after another specified node, regardless of location in the list", () => {
+    list.insertAfter("third insertion", 2);
+    list.insertAfter("testing123", 1);
+    const allValues = list.toString();
+    expect(allValues).toBe(
+      "third insertion -> 2 -> second insertion -> 1 -> testing123 -> 1 -> hockey -> football -> NULL"
+    );
+  });
 });
