@@ -20,3 +20,13 @@ Seems to be the standard approach for JS.
 
 `insertAfter` - insert a value after a specified node
 
+`kthFromEnd` - Returns the node’s value that is k places from the tail of the linked list.
+
+### Collaborators
+Alex Grazda
+Stephanie Riehle
+
+## Visual
+
+![kth](./kthFromEnd.png)
+

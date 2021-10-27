@@ -103,21 +103,45 @@ class LinkedList {
     }
     return this;
   }
+
+  kthFromEnd(k) {
+    let current = this.head;
+    let length = 0;
+    let array = [];
+
+    while (current) {
+      array.push(current.value);
+      length++;
+      current = current.next;
+    }
+
+    if (k < 0) {
+      return "Provide a positive number";
+    }
+
+    if (k >= length) {
+      return "Provide a smaller number";
+    }
+
+    let lastIndexPosition = length - k - 1;
+    return array[lastIndexPosition];
+  }
 }
 
-// let list = new LinkedList();
-// list.insert(1);
-// list.insert(2);
-// list.insert(3);
-// list.insert("string");
-// list.insert(5);
-// list.append("mango");
-// console.log("includes 3?", list.includes(3)); // true
-// console.log("includes 6?", list.includes(6)); // false
+let list = new LinkedList();
+list.insert(1);
+list.insert(2);
+list.insert(3);
+list.insert("string");
+list.insert(5);
+list.append("mango");
+console.log("includes 3?", list.includes(3)); // true
+console.log("includes 6?", list.includes(6)); // false
 
-// console.log(list.toString());
+console.log(list.toString());
 // list.insertBefore(3, "testBefore");
 // list.insertAfter(2, "testAfter");
-// console.log(list.toString());
+console.log(list.toString());
+console.log(list.kthFromEnd(-1));
 
 module.exports = { Node, LinkedList };
