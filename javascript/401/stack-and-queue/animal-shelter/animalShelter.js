@@ -10,11 +10,7 @@ class AnimalShelter {
   }
 
   enqueue(animal) {
-    if (pref !== "dog" || pref !== "cat") {
-      throw new Error("Valid animals are 'dog' or 'cat'")
-    }
-
-    if (animal === "dog") {
+    if (animal.animal === "dog") {
       this.#dogs.enqueue(animal)
       return
     }
