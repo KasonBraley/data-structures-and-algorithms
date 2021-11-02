@@ -9,7 +9,7 @@ class AnimalShelter {
   }
 
   enqueue(animal) {
-    if (animal.animal !== "dog" || animal.animal !== "cat") {
+    if (animal.animal !== "dog" && animal.animal !== "cat") {
       throw new Error("Valid animals are 'dog' or 'cat'")
     }
 
