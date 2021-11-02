@@ -2,9 +2,11 @@ const Stack = require("../stack.js")
 const Queue = require("../queue.js")
 
 class AnimalShelter {
+  #dogs
+  #cats
   constructor() {
-    this.dogs = new Queue()
-    this.cats = new Queue()
+    this.#dogs = new Queue()
+    this.#cats = new Queue()
   }
 
   enqueue(animal) {
@@ -13,10 +15,10 @@ class AnimalShelter {
     }
 
     if (animal === "dog") {
-      this.dogs.enqueue(animal)
+      this.#dogs.enqueue(animal)
       return
     }
-    this.cats.enqueue(animal)
+    this.#cats.enqueue(animal)
   }
 
   dequeue(pref) {
@@ -25,10 +27,18 @@ class AnimalShelter {
     }
 
     if (pref === "dog") {
-      return this.dogs.dequeue()
+      return this.#dogs.dequeue()
     }
 
-    return this.cats.dequeue()
+    return this.#cats.dequeue()
+  }
+
+  getDogs() {
+    return this.#dogs.front
+  }
+
+  getCats() {
+    return this.#cats.front
   }
 }
 
