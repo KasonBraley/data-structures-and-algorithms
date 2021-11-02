@@ -22,7 +22,7 @@ class AnimalShelter {
   }
 
   dequeue(pref) {
-    if (pref !== "dog" || pref !== "cat") {
+    if (pref !== "dog" && pref !== "cat") {
       return null
     }
 
