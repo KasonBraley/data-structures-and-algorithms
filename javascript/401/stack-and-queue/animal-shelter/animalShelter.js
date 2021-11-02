@@ -1,4 +1,3 @@
-const Stack = require("../stack.js")
 const Queue = require("../queue.js")
 
 class AnimalShelter {
