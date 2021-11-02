@@ -50,6 +50,16 @@ class Queue {
     }
     return false
   }
+
+  getSize() {
+    let count = 0
+    let front = this.front
+    while (front) {
+      count += 1
+      front = front.next
+    }
+    return count
+  }
 }
 
 module.exports = Queue
