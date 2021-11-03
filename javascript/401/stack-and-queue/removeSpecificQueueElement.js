@@ -5,7 +5,6 @@ function removeSpecificQueueElement(queue, element) {
   let count = 0
   let size = queue.getSize()
 
-  // might need element.name here?
   // the element that is supposed to be removed actually gets "removed" in this while loop.
   // because if queue.front equals the element, the while loop will break,
   // and it doesn't get equeued into the temp queue
