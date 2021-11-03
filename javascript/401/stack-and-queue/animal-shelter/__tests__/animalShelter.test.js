@@ -49,5 +49,18 @@ describe("Animal Shelter class functionality", () => {
     animalShelter.dequeue("cat")
     expect(animalShelter.getDogs()).toBeNull()
     expect(animalShelter.getCats()).toBeNull()
+
+    // strecth goal test
+    animalShelter.enqueue(dog)
+    animalShelter.enqueue(cat)
+    animalShelter.enqueue(dog2)
+    animalShelter.enqueue(cat2)
+    animalShelter.dequeue("dog")
+    animalShelter.dequeue("dog")
+    animalShelter.dequeue("cat")
+    expect(animalShelter.getShelterAnimals().value.name).toBe("Bosley")
+    expect(animalShelter.getDogs()).toBeNull()
+    expect(animalShelter.getCats().value.name).toBe("Bosley")
+    expect(animalShelter.dequeue().name).toBe("Bosley")
   })
 })
