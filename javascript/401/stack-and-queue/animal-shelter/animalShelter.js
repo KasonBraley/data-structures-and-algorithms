@@ -65,42 +65,4 @@ class AnimalShelter {
   }
 }
 
-let dog = {
-  animal: "dog",
-  name: "Ollie",
-}
-let cat = {
-  animal: "cat",
-  name: "Pumpkin",
-}
-let dog2 = {
-  animal: "dog",
-  name: "Mango",
-}
-let cat2 = {
-  animal: "cat",
-  name: "Bosley",
-}
-
-let animalShelter = new AnimalShelter()
-animalShelter.enqueue(dog)
-animalShelter.enqueue(cat)
-console.log(1, animalShelter.getDogs())
-console.log(2, animalShelter.getCats())
-console.log(3, animalShelter.getShelterAnimals())
-console.log(4, animalShelter.dequeue())
-console.log(5, animalShelter.getDogs())
-console.log(6, animalShelter.getCats())
-console.log(7, animalShelter.getShelterAnimals())
-animalShelter.enqueue(dog2)
-animalShelter.enqueue(cat2)
-console.log(8, animalShelter.getDogs())
-console.log(9, animalShelter.getCats())
-console.log(10, animalShelter.getShelterAnimals())
-console.log(11, animalShelter.dequeue("dog"))
-console.log(12, animalShelter.dequeue())
-console.log(15, animalShelter.getDogs())
-console.log(16, animalShelter.getCats())
-console.log(17, animalShelter.getShelterAnimals())
-
 module.exports = AnimalShelter
