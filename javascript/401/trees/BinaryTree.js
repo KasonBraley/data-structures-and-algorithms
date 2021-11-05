@@ -1,4 +1,8 @@
 class BinaryTree {
+  constructor(root = null) {
+    this.root = root
+  }
+
   preOrder(root) {
     if (!root) {
       throw new Error("Parameter 'root' required")
