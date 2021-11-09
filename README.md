@@ -9,4 +9,4 @@
 [stack-and-queue](./401/stack-and-queue/README.md)\
 [pseudo-queue](./401/stack-and-queue/pseudoQueue/README.md)\
 [animal-shelter](./401/stack-and-queue/animal-shelter/README.md)\
-[binary-trees](./401/trees/__tests__/binaryTree.test.js)
+[binary-trees](./401/trees/README.md)

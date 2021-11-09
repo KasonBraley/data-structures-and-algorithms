@@ -50,6 +50,38 @@ class BinaryTree {
       this.postOrder(root.right, cb)
     }
   }
+
+  findMax() {
+    if (!this.root) {
+      throw new Error("Empty binary tree")
+    }
+
+    let maxValue = 0
+
+    this.preOrder(this.root, (value) => {
+      if (value > maxValue) {
+        maxValue = value
+      }
+    })
+
+    return maxValue
+  }
+
+  findMin() {
+    if (!this.root) {
+      throw new Error("Empty binary tree")
+    }
+
+    let minValue = this.root.value
+
+    this.preOrder(this.root, (value) => {
+      if (value < minValue) {
+        minValue = value
+      }
+    })
+
+    return minValue
+  }
 }
 
 module.exports = BinaryTree
