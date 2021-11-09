@@ -9,4 +9,5 @@
 [stack-and-queue](./401/stack-and-queue/README.md)\
 [pseudo-queue](./401/stack-and-queue/pseudoQueue/README.md)\
 [animal-shelter](./401/stack-and-queue/animal-shelter/README.md)\
-[binary-trees](./401/trees/README.md)
+[binary-trees](./401/trees/README.md)\
+[binary-trees-breadthFirst-traversal](./401/trees/breadthFirst.js)
