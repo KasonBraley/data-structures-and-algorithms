@@ -60,7 +60,17 @@ describe("BinaryTree", () => {
     expect(results).toMatchObject([1, 2, 3])
   })
 
-  test("Binary search tree methods", () => {
+  test("Can find the largest value in a binary tree", () => {
+    expect(binaryTree.findMax()).toBe(3)
+  })
+
+  test("Can find the smallest value in a binary tree", () => {
+    expect(binaryTree.findMin()).toBe(1)
+  })
+})
+
+describe("Binary Search Tree", () => {
+  test("Binary search tree methods; add, contains", () => {
     let searchTree = new BinarySearchTree()
     searchTree.add(1)
     searchTree.add(2)
