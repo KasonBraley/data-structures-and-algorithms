@@ -3,53 +3,52 @@ class BinaryTree {
     this.root = root
   }
 
-  preOrder(root) {
+  preOrder(root, cb) {
     if (!root) {
       throw new Error("Parameter 'root' required")
     }
 
-    console.log(root.value)
+    cb(root.value)
 
     if (root.left) {
-      this.preOrder(root.left)
+      this.preOrder(root.left, cb)
     }
 
     if (root.right) {
-      this.preOrder(root.right)
+      this.preOrder(root.right, cb)
     }
   }
 
-  inOrder(root) {
+  inOrder(root, cb) {
     if (!root) {
       throw new Error("Parameter 'root' required")
     }
 
     if (root.left) {
-      this.inOrder(root.left)
+      this.inOrder(root.left, cb)
     }
 
-    console.log(root.value)
+    cb(root.value)
 
     if (root.right) {
-      this.inOrder(root.right)
+      this.inOrder(root.right, cb)
     }
   }
 
-  postOrder(root) {
+  postOrder(root, cb) {
     if (!root) {
       throw new Error("Parameter 'root' required")
     }
-    let arr = []
+
+    cb(root.value)
 
     if (root.left) {
-      this.postOrder(root.left)
+      this.postOrder(root.left, cb)
     }
 
     if (root.right) {
-      this.postOrder(root.right)
+      this.postOrder(root.right, cb)
     }
-
-    return arr.push(root.value)
   }
 }
 
