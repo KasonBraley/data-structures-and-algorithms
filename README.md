@@ -10,4 +10,5 @@
 [pseudo-queue](./401/stack-and-queue/pseudoQueue/README.md)\
 [animal-shelter](./401/stack-and-queue/animal-shelter/README.md)\
 [binary-trees](./401/trees/README.md)\
-[binary-trees-breadthFirst-traversal](./401/trees/breadthFirst.js)
+[binary-trees-breadthFirst-traversal](./401/trees/breadthFirst.js)\
+[fizzBuzz - kary](./401/trees/kary/fizzBuzzTree.js)
