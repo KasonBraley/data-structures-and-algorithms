@@ -4,6 +4,7 @@ const Node = require("../Node.js")
 const BinaryTree = require("../BinaryTree.js")
 const BinarySearchTree = require("../BinarySearchTree.js")
 const breadthFirst = require("../breadthFirst.js")
+const sumOdd = require('../odd.js')
 
 describe("Breath first function", () => {
   test("BinaryTree: It should return an array of all the values in the tree, in the breadth first order", () => {
@@ -47,5 +48,20 @@ describe("Breath first function", () => {
     searchTree.add(9)
 
     expect(breadthFirst(searchTree)).toMatchObject([5, 1, 6, 2, 7, 3, 8, 4, 9])
+  })
+
+  test("Sum odd", () => {
+    let searchTree = new BinarySearchTree()
+    searchTree.add(5)
+    searchTree.add(1)
+    searchTree.add(2)
+    searchTree.add(3)
+    searchTree.add(4)
+    searchTree.add(6)
+    searchTree.add(7)
+    searchTree.add(8)
+    searchTree.add(9)
+
+    console.log(sumOdd(searchTree))
   })
 })
