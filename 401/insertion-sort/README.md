@@ -6,4 +6,4 @@ Insertion sort implementation. Sorts an array in ascending order.
 
 [Solution](./insertionSort.js)
 
-[Tests](./__tests/insertionSort.test.js)
+[Tests](./__tests__/insertionSort.test.js)

@@ -6,4 +6,4 @@ Merge sort implementation. Sorts an array in ascending order.
 
 [Solution](./mergeSort.js)
 
-[Tests](./__tests/mergeSort.test.js)
+[Tests](./__tests__/mergeSort.test.js)
