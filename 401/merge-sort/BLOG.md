@@ -1,5 +1,7 @@
 # Merge Sort
 
+Takes in an array and splits it in half continuously until every child array has a length of 1. Then it merges the each of the child arrays in a sorted (ascending) order up the call stack until the entire array is sorted.
+
 ### Pseudocode
 
 ```
@@ -39,3 +41,9 @@ ALGORITHM Merge(left, right, arr)
 
 ```
 
+### Trace
+
+Sample Array: [8,4,23,42,16,15]
+Correct Output: [4,8,15,16,23,42]
+
+![visual step through](./assets/visual.jpg)
