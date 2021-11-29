@@ -1,6 +1,6 @@
 const LinkedList = require("../linked-list/LinkedList.js")
 
-class Hashtable {
+class HashTable {
   constructor(size) {
     this.size = size
     this.map = new Array(size)
@@ -68,3 +68,5 @@ class Hashtable {
     return false
   }
 }
+
+module.exports = HashTable
