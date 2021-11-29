@@ -13,4 +13,5 @@
 [binary-trees-breadthFirst-traversal](./401/trees/breadthFirst.js)\
 [fizzBuzz - kary](./401/trees/kary/fizzBuzzTree.js)\
 [insertion-sort](./401/insertion-sort/README.md)\
-[merge-sort](./401/merge-sort/README.md)
+[merge-sort](./401/merge-sort/README.md)\
+[HashTable](./401/hashtable/README.md)
