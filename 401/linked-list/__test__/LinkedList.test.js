@@ -1,5 +1,5 @@
 const { describe, expect, test } = require("@jest/globals")
-const { LinkedList } = require("../LinkedList.js")
+const LinkedList = require("../LinkedList.js")
 
 describe("Testing Linked List implementation", () => {
   let list = new LinkedList()
