@@ -1,9 +1,4 @@
-class Node {
-  constructor(value, next = null) {
-    this.value = value
-    this.next = next
-  }
-}
+const Node = require("../stack-and-queue/node.js")
 
 class LinkedList {
   constructor() {
@@ -128,4 +123,4 @@ class LinkedList {
   }
 }
 
-module.exports = { Node, LinkedList }
+module.exports = LinkedList
