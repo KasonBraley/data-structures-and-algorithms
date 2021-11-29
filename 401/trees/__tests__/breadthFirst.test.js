@@ -62,6 +62,6 @@ describe("Breath first function", () => {
     searchTree.add(8)
     searchTree.add(9)
 
-    console.log(sumOdd(searchTree))
+    expect(sumOdd(searchTree)).toBe(25)
   })
 })
