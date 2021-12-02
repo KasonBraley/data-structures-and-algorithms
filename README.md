@@ -14,4 +14,6 @@
 [fizzBuzz - kary](./401/trees/kary/fizzBuzzTree.js)\
 [insertion-sort](./401/insertion-sort/README.md)\
 [merge-sort](./401/merge-sort/README.md)\
-[HashTable](./401/hashtable/README.md)
+[quick-sort](./401/quick-sort/README.md)\
+[HashTable](./401/hashtable/README.md)\
+[repeatedWord](./401/repeatedWord/README.md)
