@@ -62,7 +62,15 @@ class HashTable {
     let index = this.hash(key)
 
     if (this.map[index]) {
-      return true
+      let current = this.map[index].head
+
+      while (current) {
+        // required obj access like this since key is a number
+        if (current.value[key]) {
+          return true
+        }
+        current = current.next
+      }
     }
 
     return false
