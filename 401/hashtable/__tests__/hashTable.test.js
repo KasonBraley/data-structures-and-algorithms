@@ -16,7 +16,7 @@ describe("Hash Table", () => {
     expect(table.get("hello")).toBe("world")
   })
 
-  test("Returs the correct value for incorrect keys", () => {
+  test("Returns the correct value for incorrect keys", () => {
     table.add("hello", "world")
     expect(table.contains("bye")).toBeFalsy()
   })
