@@ -74,8 +74,6 @@ class Graph {
         if (!visitedNodes.has(neighbor)) {
           queue.push(neighbor)
           visitedNodes.add(neighbor)
-        } else {
-          continue
         }
       }
     }
