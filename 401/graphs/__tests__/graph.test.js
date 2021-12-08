@@ -9,6 +9,17 @@ describe("Graph implementation", () => {
     graph.addVertex(A)
     expect(graph.adjacencyList.size).toBe(1)
   })
+  test("A collection of all nodes can be properly retrieved from the graph", () => {
+    let graph = new Graph()
+
+    let A = new Vertex("A")
+    let B = new Vertex("B")
+
+    graph.addVertex(A)
+    graph.addVertex(B)
+
+    expect(graph.getNodes()).toMatchObject([{ value: "A" }, { value: "B" }])
+  })
   test("The proper size is returned, representing the number of nodes in the graph", () => {
     let graph = new Graph()
 
