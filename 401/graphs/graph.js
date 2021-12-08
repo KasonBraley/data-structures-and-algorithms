@@ -80,6 +80,9 @@ class Graph {
 
     return visitedNodes
   }
+  getSize() {
+    return this.adjacencyList.size
+  }
 }
 
 let graph = new Graph()
