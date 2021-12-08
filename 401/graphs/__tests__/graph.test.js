@@ -20,6 +20,21 @@ describe("Graph implementation", () => {
 
     expect(graph.getNodes()).toMatchObject([{ value: "A" }, { value: "B" }])
   })
+
+  test("All appropriate neighbors can be retrieved from the graph, weight included", () => {
+    let graph = new Graph()
+
+    let A = new Vertex("A")
+    let B = new Vertex("B")
+
+    graph.addVertex(A)
+    graph.addVertex(B)
+    graph.addDirectedEdge(A, B)
+
+    expect(graph.getNeighbors(A)).toMatchObject([
+      { vertex: { value: "B" }, weight: 0 },
+    ])
+  })
   test("The proper size is returned, representing the number of nodes in the graph", () => {
     let graph = new Graph()
 
