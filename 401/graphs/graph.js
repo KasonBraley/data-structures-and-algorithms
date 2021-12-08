@@ -21,13 +21,9 @@ class Graph {
     this.adjacencyList = new Map()
   }
 
-  // adding a value to our adjency
-  addVertex(value) {
-    let payload = new Vertex(value)
-    this.adjacencyList.set(payload, [])
-
-    // for simplicities sake
-    return payload
+  // adding a vertex to our adjency
+  addVertex(vertex) {
+    this.adjacencyList.set(vertex, [])
   }
 
   // add method should specify direct vs undirected, adding a connection between vertices
@@ -90,14 +86,23 @@ class Graph {
 
 let graph = new Graph()
 
-let A = graph.addVertex("A")
-let B = graph.addVertex("B")
-let C = graph.addVertex("C")
-let D = graph.addVertex("D")
-let E = graph.addVertex("E")
-let F = graph.addVertex("F")
-let G = graph.addVertex("G")
-let H = graph.addVertex("H")
+let A = new Vertex("A")
+let B = new Vertex("B")
+let C = new Vertex("C")
+let D = new Vertex("D")
+let E = new Vertex("E")
+let F = new Vertex("F")
+let G = new Vertex("G")
+let H = new Vertex("H")
+
+graph.addVertex(A)
+graph.addVertex(B)
+graph.addVertex(C)
+graph.addVertex(D)
+graph.addVertex(E)
+graph.addVertex(F)
+graph.addVertex(G)
+graph.addVertex(H)
 
 graph.addDirectedEdge(A, D)
 graph.addDirectedEdge(A, C)
