@@ -94,38 +94,5 @@ class Graph {
   }
 }
 
-let graph = new Graph()
+module.exports = { Graph, Vertex }
 
-let A = new Vertex("A")
-let B = new Vertex("B")
-let C = new Vertex("C")
-let D = new Vertex("D")
-let E = new Vertex("E")
-let F = new Vertex("F")
-let G = new Vertex("G")
-let H = new Vertex("H")
-
-graph.addVertex(A)
-graph.addVertex(B)
-graph.addVertex(C)
-graph.addVertex(D)
-graph.addVertex(E)
-graph.addVertex(F)
-graph.addVertex(G)
-graph.addVertex(H)
-
-graph.addDirectedEdge(A, D)
-graph.addDirectedEdge(A, C)
-graph.addDirectedEdge(A, B)
-graph.addDirectedEdge(D, F)
-graph.addDirectedEdge(B, C)
-graph.addDirectedEdge(B, E)
-graph.addDirectedEdge(C, F)
-graph.addDirectedEdge(C, E)
-graph.addDirectedEdge(C, B)
-graph.addDirectedEdge(F, G)
-graph.addDirectedEdge(G, H)
-graph.addDirectedEdge(H, F)
-
-// console.log(graph);
-console.log(graph.breadthFirst(A))
