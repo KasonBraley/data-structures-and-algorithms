@@ -80,8 +80,17 @@ class Graph {
 
     return visitedNodes
   }
+
   getSize() {
     return this.adjacencyList.size
+  }
+
+  getNodes() {
+    let arr = []
+    this.adjacencyList.forEach((value, key) => {
+      arr.push(key)
+    })
+    return arr
   }
 }
 
