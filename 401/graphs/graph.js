@@ -90,9 +90,10 @@ class Graph {
     this.adjacencyList.forEach((value, key) => {
       arr.push(key)
     })
+
+    if (arr.length === 0) return null
     return arr
   }
 }
 
 module.exports = { Graph, Vertex }
-

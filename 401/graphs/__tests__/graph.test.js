@@ -59,4 +59,9 @@ describe("Graph implementation", () => {
     graph.addDirectedEdge(A)
     expect(graph.adjacencyList.size).toBe(1)
   })
+
+  test("An empty graph properly returns null", () => {
+    let graph = new Graph()
+    expect(graph.getNodes()).toBe(null)
+  })
 })
