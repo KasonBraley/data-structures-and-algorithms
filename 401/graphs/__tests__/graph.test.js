@@ -35,6 +35,7 @@ describe("Graph implementation", () => {
       { vertex: { value: "B" }, weight: 0 },
     ])
   })
+
   test("The proper size is returned, representing the number of nodes in the graph", () => {
     let graph = new Graph()
 
@@ -48,5 +49,14 @@ describe("Graph implementation", () => {
     graph.addVertex(D)
 
     expect(graph.getSize()).toBe(4)
+  })
+
+  test("A graph with only one node and edge can be properly returned", () => {
+    let graph = new Graph()
+
+    let A = new Vertex("A")
+    graph.addVertex(A)
+    graph.addDirectedEdge(A)
+    expect(graph.adjacencyList.size).toBe(1)
   })
 })
