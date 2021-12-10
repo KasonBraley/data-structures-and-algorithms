@@ -5,12 +5,14 @@ function businessTrip(graph, cities) {
 
   for (let i = 0; i < cities.length; i++) {
     let contains = graph.getNeighbors(cities[i]).some((city) => {
-      return city.vertex.value === cities[i + 1]?.value
+      if (cities[i + 1]) {
+        return city.vertex.value === cities[i + 1].value
+      }
     })
 
     if (contains) {
       let directFlight = graph.getNeighbors(cities[i]).filter((city) => {
-        return city.vertex.value === cities[i + 1]?.value
+        return city.vertex.value === cities[i + 1].value
       })[0]
 
       cost += directFlight.weight
