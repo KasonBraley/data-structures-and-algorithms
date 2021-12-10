@@ -65,7 +65,7 @@ class Graph {
     while (queue.length) {
       const current = queue.shift()
 
-      // I need to see all of current nodes adjecneies
+      // I need to see all of current nodes adjecencies
       let neighbors = this.getNeighbors(current)
 
       for (let edge of neighbors) {
