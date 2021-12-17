@@ -22,9 +22,7 @@ class Queue {
   }
 
   dequeue = () => {
-    if (this.isEmpty()) {
-      throw new Error("Empty queue")
-    }
+    if (this.isEmpty()) throw new Error("Empty queue")
 
     let currentFront = this.front
     this.front = currentFront.next
@@ -33,21 +31,20 @@ class Queue {
       this.rear = currentFront.next
     }
 
+    //  We do this because we want to make sure that all the proper Nodes clear any unnecessary references for the garbage collector to come in later and clean up.
+    currentFront.next = null
     return currentFront.value
   }
 
   peek = () => {
-    if (this.isEmpty()) {
-      throw new Error("Empty queue")
-    }
+    if (this.isEmpty()) throw new Error("Empty queue")
 
     return this.front.value
   }
 
   isEmpty = () => {
-    if (!this.front) {
-      return true
-    }
+    if (!this.front) return true
+
     return false
   }
 

@@ -5,6 +5,7 @@ class BinarySearchTree extends BinaryTree {
   constructor() {
     super()
   }
+
   add(value) {
     if (!this.root) {
       this.root = new Node(value)

@@ -11,16 +11,13 @@ class Stack {
   }
 
   push = (value) => {
-    let currentTop = this.top
     let nodeToAdd = new Node(value)
-    nodeToAdd.next = currentTop
+    nodeToAdd.next = this.top
     this.top = nodeToAdd
   }
 
   pop = () => {
-    if (this.isEmpty()) {
-      throw new Error("Empty stack")
-    }
+    if (this.isEmpty()) throw new Error("Empty stack")
 
     let currentTop = this.top
     this.top = currentTop.next
@@ -29,17 +26,14 @@ class Stack {
   }
 
   peek = () => {
-    if (this.isEmpty()) {
-      throw new Error("Empty stack")
-    }
+    if (this.isEmpty()) throw new Error("Empty stack")
 
     return this.top.value
   }
 
   isEmpty = () => {
-    if (!this.top) {
-      return true
-    }
+    if (!this.top) return true
+
     return false
   }
 }

@@ -69,7 +69,8 @@ class LinkedList {
 
     while (currentNode) {
       if (currentNode.value === value) {
-        const newNode = new Node(newValue, currentNode)
+        const newNode = new Node(newValue)
+        newNode.next = currentNode
 
         if (previousNode) {
           previousNode.next = newNode
