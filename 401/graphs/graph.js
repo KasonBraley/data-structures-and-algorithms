@@ -60,12 +60,11 @@ class Graph {
     const visitedNodes = new Set()
 
     queue.push(startVertex)
-    visitedNodes.add(startVertex)
 
     while (queue.length) {
       const current = queue.shift()
+      visitedNodes.add(current.value)
 
-      // I need to see all of current nodes adjecencies
       let neighbors = this.getNeighbors(current)
 
       for (let edge of neighbors) {
@@ -73,12 +72,11 @@ class Graph {
 
         if (!visitedNodes.has(neighbor)) {
           queue.push(neighbor)
-          visitedNodes.add(neighbor)
         }
       }
     }
 
-    return visitedNodes
+    return [...visitedNodes]
   }
 
   getSize() {

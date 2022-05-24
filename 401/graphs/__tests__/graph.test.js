@@ -79,3 +79,39 @@ describe("Graph implementation", () => {
     expect(graph.getNodes()).toBe(null)
   })
 })
+
+describe("Graph Traversals", () => {
+  test("Breadth First traversal", () => {
+    let graph = new Graph()
+
+    let Pandora = new Vertex("Pandora")
+    let Arendelle = new Vertex("Arendelle")
+    let Metroville = new Vertex("Metroville")
+    let Monstropolis = new Vertex("Monstropolis")
+    let Narnia = new Vertex("Narnia")
+    let Naboo = new Vertex("Naboo")
+
+    graph.addVertex(Pandora)
+    graph.addVertex(Narnia)
+    graph.addVertex(Metroville)
+    graph.addVertex(Arendelle)
+    graph.addVertex(Monstropolis)
+    graph.addVertex(Naboo)
+
+    graph.addDirectedEdge(Pandora, Arendelle)
+    graph.addDirectedEdge(Arendelle, Metroville)
+    graph.addDirectedEdge(Arendelle, Monstropolis)
+    graph.addDirectedEdge(Metroville, Monstropolis)
+    graph.addDirectedEdge(Metroville, Narnia)
+    graph.addDirectedEdge(Metroville, Naboo)
+
+    expect(graph.breadthFirst(Pandora)).toMatchObject([
+      "Pandora",
+      "Arendelle",
+      "Metroville",
+      "Monstropolis",
+      "Narnia",
+      "Naboo",
+    ])
+  })
+})
